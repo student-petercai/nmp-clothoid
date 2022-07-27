@@ -6,7 +6,7 @@ g1fitting_ext_mod = Extension("g1fitting",
   sources=["g1fittingmodule.cpp"],
   include_dirs=["."],
   extra_compile_args=["-std=c++11"],
-  libraries=["boost_python"],
+  libraries=["boost_python3"],
 )
 
 # unwanted_flags = [
@@ -21,4 +21,4 @@ g1fitting_ext_mod = Extension("g1fitting",
 #     for uwf in unwanted_flags:
 #       cfg_vars[key] = value.replace(uwf, "")
 
-setup(name="G1Fitting", ext_modules=[g1fitting_ext_mod])
+setup(name="G1Fitting", ext_modules=[g1fitting_ext_mod], python_requires='>3.6')
